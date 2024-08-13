@@ -9,8 +9,8 @@ public class Main {
         System.out.println("Welcome to Maid Application. We will ask you a series of questions for you to answer.");
         System.out.println("1. What's your IGN:");
         String name = reader.nextLine();
-        System.out.println("2. What's your age (note, you can type - if you don't want to disclose it)");
-        String age = reader.nextLine();
+        System.out.println("2. What's your age (note: you can type 0 if you don't want to disclose it!)");
+        int age = Integer.valueOf(reader.nextLine());
         System.out.println("3. At what point in the game are you at?");
         String gamesave = reader.nextLine();
         System.out.println("4. What would you say your reputation is like?");
