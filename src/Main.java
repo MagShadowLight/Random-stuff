@@ -1,37 +1,84 @@
 import java.util.Scanner;
 
-
 public class Main {
+
     public static void main(String[] args) {
 
-        Scanner reader = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
-        System.out.println("Welcome to Maid Application. We will ask you a series of questions for you to answer.");
-        System.out.println("1. What's your IGN:");
-        String name = reader.nextLine();
-        System.out.println("2. What's your age (note, you can type - if you don't want to disclose it)");
-        String age = reader.nextLine();
-        System.out.println("3. At what point in the game are you at?");
-        String gamesave = reader.nextLine();
-        System.out.println("4. What would you say your reputation is like?");
-        String reputation = reader.nextLine();
-        System.out.println("5. Do you see yourself being a part of maids for a while?");
-        String maids = reader.nextLine();
-        System.out.println("6. Do you enjoy playing with others?");
-        String social = reader.nextLine();
-        System.out.println("7. What are you looking for in a guild?");
-        String guild = reader.nextLine();
-        System.out.println("8. Would you be interest in forming a blood contract eternally binding to grind portal to donate mats to maids forever and ever?");
-        String portal = reader.nextLine();
-        System.out.println("You wrote:");
-        System.out.println(name);
-        System.out.println(age);
-        System.out.println(gamesave);
-        System.out.println(reputation);
-        System.out.println(maids);
-        System.out.println(social);
-        System.out.println(guild);
-        System.out.println(portal);
+        double num1;
+        double num2 = 100000000000000.0;
+        int stringLeg = 8;
+
+        String text1 = "";
+        String text2 = "";
+
+        System.out.println("Give seventeen floating point numbers");
+
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < stringLeg; j++) {
+                num1 = Double.valueOf(scan.nextLine());
+                num1 = (int) num1;
+                if (num1 == num2) {
+                    return;
+                } else {
+                    num2 = num1;
+                }
+
+
+                if (num1 >= 26) {
+                    num1 = num1 % 26;
+                }
+
+                if (num1 >= 17) {
+                    text1 = text1;
+                } else if (num1 == 16) {
+                    text1 = text1 + "Q ";
+                } else if (num1 == 15) {
+                    text1 = text1 + "P ";
+                } else if (num1 == 14) {
+                    text1 = text1 + "O ";
+                } else if (num1 == 13) {
+                    text1 = text1 + "N ";
+                } else if (num1 == 12) {
+                    text1 = text1 + "M ";
+                } else if (num1 == 11) {
+                    text1 = text1 + "L ";
+                } else if (num1 == 10) {
+                    text1 = text1 + "K ";
+                } else if (num1 == 9) {
+                    text1 = text1 + "J ";
+                } else if (num1 == 8) {
+                    text1 = text1 + "I ";
+                } else if (num1 == 7) {
+                    text1 = text1 + "H ";
+                } else if (num1 == 6) {
+                    text1 = text1 + "G ";
+                } else if (num1 == 5) {
+                    text1 = text1 + "F ";
+                } else if (num1 == 4) {
+                    text1 = text1 + "E ";
+                } else if (num1 == 3) {
+                    text1 = text1 + "D ";
+                } else if (num1 == 2) {
+                    text1 = text1 + "C ";
+                } else if (num1 == 1) {
+                    text1 = text1 + "B ";
+                } else {
+                    text1 = text1 + "A ";
+                }
+
+
+            }
+            if (text2.equals("")) {
+                text2 = text1;
+                stringLeg = 9;
+                text1 = "";
+            }
+        }
+
+        System.out.println(text1);
+        System.out.println(text2);
 
     }
 }
